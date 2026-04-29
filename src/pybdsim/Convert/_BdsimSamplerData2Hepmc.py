@@ -56,7 +56,7 @@ def BdsimSamplerData2Hepmc2(bdsimFile,outputFileName,samplerName,ZForHits=0,pidL
             eventID += 1
 
     fHEP.close()
-    print("{} events written to HEPMC2 file {}.".format(eventID,outputFileName))
+    print("{} events written to HEPMC2 file {}".format(eventID,outputFileName))
 
 def BdsimSamplerData2Hepmc3(bdsimFile,outputFileName,samplerName,ZForHits=0,pidList=[],weightsName=""):
     """
@@ -115,7 +115,7 @@ def BdsimSamplerData2Hepmc3(bdsimFile,outputFileName,samplerName,ZForHits=0,pidL
                     compoundWeight = skimWeight*s.weight[ti]
                 except:
                     compoundWeight = skimWeight
-            evt.set_weight(weightNameStr,compoundWeight)
+                evt.set_weight(weightNameStr,compoundWeight)
 
             # xp, yp, zp are components of the unit momentum vector
             # p is the momentum magnitude, 'energy' the total energy
@@ -132,4 +132,4 @@ def BdsimSamplerData2Hepmc3(bdsimFile,outputFileName,samplerName,ZForHits=0,pidL
             eventID += 1
 
     fHEP.close()
-    print("{} events written to HEPMC3 file {}.".format(eventID,outputFileName))
+    print("{} events written to HEPMC3 file {}".format(eventID,outputFileName))
